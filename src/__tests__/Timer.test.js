@@ -3,9 +3,11 @@ import { configure, shallow } from 'enzyme';
 import { spy, stub, useFakeTimers } from 'sinon'
 import Adapter from 'enzyme-adapter-react-16';
 
-configure({ adapter: new Adapter() });
+
 
 import Timer from '../Timer';
+
+configure({ adapter: new Adapter() });
 
 test('it calls componentDidMount', () => {
   spy(Timer.prototype, 'componentDidMount');
